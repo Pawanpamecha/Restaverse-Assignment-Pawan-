@@ -1,13 +1,20 @@
 # Restaverse-Assignment-Pawan-
 
 Ensure you have Node.js and npm installed for both frontend and backend.
+
+
 Make sure you have access to a Google Business account for integrating Google login.
+
+
 Setup and Installation
 Step 1: Open Two Terminals in VS Code
 Open VS Code and split your workspace into two terminals. One will be used for the frontend and the other for the backend.
+
+
 Step 2: Change Directories
 In one terminal, navigate to the frontend directory.
 In the other terminal, navigate to the backend directory.
+
 Step 3: Install Frontend Dependencies
 In the frontend terminal, run the following command to install all the required modules:
 
@@ -15,9 +22,12 @@ npm install
 Step 4: Start the Frontend Development Server
 In the frontend terminal, run the following command to start the frontend server:
 
+
+
 npm run dev
 Step 5: Install Backend Dependencies
 In the backend terminal, run the following command to install all necessary dependencies:
+
 
 setup.bat
 Step 6: Start the Backend Server
@@ -25,8 +35,8 @@ In the backend terminal, run the following command to start the backend server:
 
 exc.bat
 Step 7: Visit the Website
-Open a browser and go to:
 
+Open a browser and go to:
 http://localhost:3000
 This will open the Review Website in your browser.
 
