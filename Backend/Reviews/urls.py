@@ -1,8 +1,8 @@
 from django.urls import path
-from . import views
+from .views import retrieve_reviews
 
 urlpatterns = [
   # path("login/",views.login),
   # path("logout/",views.logout),
-  path("review/",views.get_reviews),
+  path("reviews/", retrieve_reviews),
 ]

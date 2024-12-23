@@ -14,7 +14,7 @@ const DashboardPage = () => {
   } = useQuery<reviewsType[]>({
     queryKey: ["reviews"],
     queryFn: async () => {
-      const response = await axios.get("http://127.0.0.1:8000/reviews/review");
+      const response = await axios.get("http://127.0.0.1:8000/reviews/reviews");
       console.log(response.data);
       return response.data.reviews;
     },
@@ -24,7 +24,6 @@ const DashboardPage = () => {
     return (
       <div className="flex justify-center items-center h-screen bg-gray-100">
         <Loader2 className="animate-spin text-gray-500 w-8 h-8" />
-        <p className="ml-3 text-gray-600 text-lg">Loading reviews...</p>
       </div>
     );
   }

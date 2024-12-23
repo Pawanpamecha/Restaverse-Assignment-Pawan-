@@ -6,67 +6,67 @@ from allauth.socialaccount.models import SocialToken
 import requests
 
 # Mock reviews data
-sample_reviews = {
-    "feedback": [
+get_reviews = {
+    "reviews": [
         {
-            "id": "001",
-            "user": {
-                "name": "Alice Walker",
-                "photoUrl": "https://example.com/photo1.jpg",
-                "anonymous": False
+            "reviewId": "001",
+            "reviewer": {
+                "displayName": "Alice Walker",
+                "profilePhotoUrl": "https://example.com/photo1.jpg",
+                "isAnonymous": False
             },
-            "text": "Excellent quality and quick service. Will return soon.",
-            "rating": "FIVE",
-            "created_at": "2024-12-20T10:00:00Z",
-            "updated_at": "2024-12-20T12:00:00Z",
-            "response": {
+            "comment": "Excellent quality and quick service. Will return soon.",
+            "starRating": "FIVE",
+            "creatTime": "2024-12-20T10:00:00Z",
+            "updateTime": "2024-12-20T12:00:00Z",
+            "reviewReply": {
                 "message": "Thank you, Alice! We're excited to serve you again.",
-                "responded_at": "2024-12-20T14:00:00Z"
+                "updateTime": "2024-12-20T14:00:00Z"
             }
         },
         {
-            "id": "002",
-            "user": {
-                "name": "Bob Johnson",
-                "photoUrl": "https://example.com/photo2.jpg",
-                "anonymous": False
+            "reviewId": "002",
+            "reviewer": {
+                "displayName": "Bob Johnson",
+                "profilePhotoUrl": "https://example.com/photo2.jpg",
+                "isAnonymous": False
             },
-            "text": "The wait time was too long, though the food was good.",
-            "rating": "THREE",
-            "created_at": "2024-12-19T09:00:00Z",
-            "updated_at": "2024-12-19T09:30:00Z",
-            "response": {
+            "comment": "The wait time was too long, though the food was good.",
+            "starRating": "THREE",
+            "creatTime": "2024-12-19T09:00:00Z",
+            "updateTime": "2024-12-19T09:30:00Z",
+            "reviewReply": {
                 "message": "Thanks for the feedback, Bob. We're working to improve!",
-                "responded_at": "2024-12-19T10:00:00Z"
+                "updateTime": "2024-12-19T10:00:00Z"
             }
         },
         {
-            "id": "003",
-            "user": {
-                "name": "Anonymous",
-                "photoUrl": "",
-                "anonymous": True
+            "reviewId": "003",
+            "reviewer": {
+                "displayName": "isAnonymous",
+                "profilePhotoUrl": "",
+                "isAnonymous": True
             },
-            "text": "Great ambiance and reasonable prices.",
-            "rating": "FOUR",
-            "created_at": "2024-12-18T08:00:00Z",
-            "updated_at": "2024-12-18T08:00:00Z",
-            "response": None
+            "comment": "Great ambiance and reasonable prices.",
+            "starRating": "FOUR",
+            "creatTime": "2024-12-18T08:00:00Z",
+            "updateTime": "2024-12-18T08:00:00Z",
+            "reviewReply": None
         },
         {
-            "id": "004",
-            "user": {
-                "name": "Charlie Davis",
-                "photoUrl": "https://example.com/photo3.jpg",
-                "anonymous": False
+            "reviewId": "004",
+            "reviewer": {
+                "displayName": "Charlie Davis",
+                "profilePhotoUrl": "https://example.com/photo3.jpg",
+                "isAnonymous": False
             },
-            "text": "The staff was incredibly polite, and the desserts were amazing.",
-            "rating": "FIVE",
-            "created_at": "2024-12-17T19:00:00Z",
-            "updated_at": "2024-12-17T19:30:00Z",
-            "response": {
+            "comment": "The staff was incredibly polite, and the desserts were amazing.",
+            "starRating": "FIVE",
+            "creatTime": "2024-12-17T19:00:00Z",
+            "updateTime": "2024-12-17T19:30:00Z",
+            "reviewReply": {
                 "message": "Thank you, Charlie! Your kind words mean the world to us.",
-                "responded_at": "2024-12-17T20:00:00Z"
+                "updateTime": "2024-12-17T20:00:00Z"
             }
         }
     ]
@@ -75,7 +75,7 @@ sample_reviews = {
 # API to fetch mock reviews
 @api_view(['GET'])
 def retrieve_reviews(request):
-    return JsonResponse(sample_reviews, safe=False)
+    return JsonResponse(get_reviews, safe=False)
 
 # Utility function to get user's Google access token
 def obtain_google_token(user):

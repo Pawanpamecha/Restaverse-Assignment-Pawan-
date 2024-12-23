@@ -1,6 +1,5 @@
 "use client";
 
-import AuthSocialButton from "@/components/AuthSocialButton";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
@@ -23,8 +22,8 @@ const LoginPage = () => {
   };
 
   return (
-    <div
-      className="flex min-h-screen items-center justify-center bg-gradient-to-br from-purple-700 via-indigo-600 to-blue-500"
+    <section
+      className="h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center"
     >
       <div className="max-w-md w-full bg-white rounded-2xl shadow-lg p-10 space-y-8">
         <h2 className="text-3xl font-bold text-center text-gray-800">
@@ -35,7 +34,6 @@ const LoginPage = () => {
         </p>
 
         <div className="mt-6 flex flex-col gap-4">
-          {/* Add subtle hover effect and styling for button */}
           <button
             onClick={socialAction}
             className="flex items-center justify-center gap-3 w-full px-4 py-3 bg-red-500 text-white text-sm font-medium rounded-lg hover:bg-red-600 transition-all duration-300"
@@ -58,7 +56,7 @@ const LoginPage = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
