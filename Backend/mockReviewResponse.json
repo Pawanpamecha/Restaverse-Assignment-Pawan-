@@ -1,0 +1,49 @@
+{
+  "feedback": [
+    {
+      "id": "001",
+      "user": {
+        "name": "Alice Walker",
+        "photoUrl": "https://example.com/photo1.jpg",
+        "anonymous": false
+      },
+      "text": "Excellent quality and quick service. Will return soon.",
+      "rating": "FIVE",
+      "created_at": "2024-12-20T10:00:00Z",
+      "updated_at": "2024-12-20T12:00:00Z",
+      "response": {
+        "message": "Thank you, Alice! We're excited to serve you again.",
+        "responded_at": "2024-12-20T14:00:00Z"
+      }
+    },
+    {
+      "id": "002",
+      "user": {
+        "name": "Bob Johnson",
+        "photoUrl": "https://example.com/photo2.jpg",
+        "anonymous": false
+      },
+      "text": "The wait time was too long, though the food was good.",
+      "rating": "THREE",
+      "created_at": "2024-12-19T09:00:00Z",
+      "updated_at": "2024-12-19T09:30:00Z",
+      "response": {
+        "message": "Thanks for the feedback, Bob. We're working to improve!",
+        "responded_at": "2024-12-19T10:00:00Z"
+      }
+    },
+    {
+      "id": "003",
+      "user": {
+        "name": "Anonymous",
+        "photoUrl": null,
+        "anonymous": true
+      },
+      "text": "Great ambiance and reasonable prices.",
+      "rating": "FOUR",
+      "created_at": "2024-12-18T08:00:00Z",
+      "updated_at": "2024-12-18T08:00:00Z",
+      "response": null
+    }
+  ]
+}
